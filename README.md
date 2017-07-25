@@ -41,7 +41,7 @@ The following options can be configured:
 - Currently only supports unencrypted/unauthenticated MQTT connections.  
 
 ## Dependencies
-- HouseMouse Alexa Skill 
+- HouseMouse - Magic Mirror Alexa Skill 
 - [mqtt](https://www.npmjs.com/package/mqtt) (installed via `npm install`)
 
 ## Contributing Guidelines
