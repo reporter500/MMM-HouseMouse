@@ -17,8 +17,7 @@ Module.register('MMM-HouseMouse', {
     showTitle: false,
     title: 'House Mouse',
     interval: 300000,
-    postText: '',
-    modules: {}
+    postText: ''
   },
 
   start: function() {
