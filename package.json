@@ -1,0 +1,28 @@
+{
+  "name": "mmm-housemouse",
+  "version": "0.1.0",
+  "description": "Alex/MQTT Module for MagicMirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reporter500/MMM-HouseMouse.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "HouseMouse",
+    "alexa",
+    "mqtt"
+  ],
+  "author": "Robert Porter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reporter500/MMM-HouseMouse/issues"
+  },
+  "homepage": "https://github.com/reporter500/MMM-HouseMouse#readme",
+  "dependencies": {
+    "mqtt": "^1.10.0"
+  }
+}
