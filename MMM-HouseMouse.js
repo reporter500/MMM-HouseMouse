@@ -57,7 +57,32 @@ Module.register('MMM-HouseMouse', {
     if (notification === 'MQTT_DATA' && payload.topic === this.config.topic) {
       this.mqttVal = payload.data.toString();
       this.loaded = true;
-      this.updateDom();
+
+        var cmd = this.mqttVal.split(' ');
+	if(cmd[0] == 'hide') {
+		MM.getModules().withClass(cmd[1]).enumerate(function(module) {
+        	        module.hide(1000, function() {
+                	        //Module hidden.
+                        });
+                });
+	}
+	if(cmd[0] == 'show') {
+                MM.getModules().withClass(cmd[1]).enumerate(function(module) {
+                        module.show(1000, function() {
+                                //Module hidden.
+                        });
+                });
+	}
+
+	var mods='';
+	MM.getModules().enumerate(function(module) {
+	//			module.hide(1000, function() {
+	//				//Module hidden.
+	//			});
+			mods = mods + module.name + "</br>";
+			});
+	this.mqttVal = this.mqttVal + "</br>" + mods;
+        this.updateDom();
     }
 
     if (notification === 'ERROR') {
