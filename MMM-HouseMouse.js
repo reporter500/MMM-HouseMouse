@@ -104,7 +104,7 @@ Module.register("MMM-HouseMouse", {
 					items = items + sClass + " not found";
 				}else{
 					items = items + sClass + " found " + dDests.length;
-					var dDest = dDests[0].getElementsByClassName("container");
+					dDest = dDests[0].getElementsByClassName("container");
 					if(dDest.length > 0) {
 						dDest[0].append(dSource);
 					}
