@@ -57,14 +57,14 @@ Module.register("MMM-HouseMouse", {
 
 	socketNotificationReceived: function(notification, payload) {
 		var positions = ["top_bar", "top_left", "top_center", "top_right", "upper_third", "middle_center", "lower_third", "bottom_left", "bottom_center", "bottom_right", "bottom_bar", "fullscreen_above", "fullscreen_below"];
-		
+
 		if (notification === "MQTT_DATA" && payload.topic === this.config.topic) {
 			this.mqttVal = payload.data.toString();
 			this.loaded = true;
 
 			var cmd = this.mqttVal.split(" ");
       			var items = "";
-      
+
 			if(cmd[0] === "hide") {
 				MM.getModules().withClass(cmd[1]).enumerate(function(module) {
         	        		module.hide(1000, function() {
@@ -93,12 +93,12 @@ Module.register("MMM-HouseMouse", {
                         	}
 
 			}
-			
-      			if(cmd[0] === "move") {
+
+      		if(cmd[0] === "move") {
 				var dSource = document.getElementById(this.identifier);
 				var dDest = "";
 				var sClass = "region " + cmd[2].replace("_"," ");
-				
+
 				var dDests = document.getElementsByClassName(sClass);
 				if(dDests.length === 0) {
 					items = items + sClass + " not found";
