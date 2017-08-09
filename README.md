@@ -14,7 +14,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
 modules: [
 	{
 		module: 'MMM-HouseMouse',
-		position: 'top_right',	// This can be any of the regions. Best results in left or right regions.
+		position: 'top_right',	// This can be any of the regions. 
 		header: 'House Mouse', // This is optional
 		config: {
 			// See 'Configuration options' for more information.
